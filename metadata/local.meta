@@ -1,0 +1,12 @@
+[app/ui]
+version = 6.0.1
+modtime = 1395598941.107321000
+
+[app/launcher]
+version = 6.0.1
+modtime = 1395598941.111360000
+
+[inputs/script%3A%2F%2F%2Fopt%2Fsplunk%2Fetc%2Fapps%2Favotx%2Fbin%2Favotx_poller.sh]
+owner = tarxvf
+version = 6.0.1
+modtime = 1395606169.644878000
