@@ -130,8 +130,8 @@ def main():
 										send = False
 							if send:
 								#CEF:Version|Device Vendor|Device Product|Device Version|Signature ID|Name|Severity|Extension
-								cef = 'CEF:0|AlienvaultOTX|AlienvaultOTX|1.0|100|Suspicious Host|1|src=%s msg=%s' % (fs[0],"%s,http://labs.alienvault.com/labs/index.php/projects/open-source-ip-reputation-portal/information-about-ip/?ip\\=%s" % (fs[3],fs[0]))
-								print "{0} avotx_poller_rev={1}; {2}".format(timestamp(), avotx_poller_rev, cef)
+								splunk_event = "avotxSource=AlienvaultOTX; SuspiciousHost={0}; message={1}; refurl=http://labs.alienvault.com/labs/index.php/projects/open-source-ip-reputation-portal/information-about-ip/?ip={2};".format(fs[0],fs[3],fs[0])
+								print "{0} avotx_poller_rev={1}; {2}".format(timestamp(), avotx_poller_rev, splunk_event)
 								#syslog(cef)
 		else:
 			print "{0} There was a problem when contacting the remote server".format(timestamp())
