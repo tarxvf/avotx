@@ -130,7 +130,7 @@ def main():
 										send = False
 							if send:
 								#CEF:Version|Device Vendor|Device Product|Device Version|Signature ID|Name|Severity|Extension
-								splunk_event = "avotxSource=AlienvaultOTX; SuspiciousHost={0}; message={1}; refurl=http://labs.alienvault.com/labs/index.php/projects/open-source-ip-reputation-portal/information-about-ip/?ip={2};".format(fs[0],fs[3],fs[0])
+								splunk_event = "avotxSource=AlienvaultOTX; SuspiciousHost={0}; message=\"{1}\"; refurl=http://labs.alienvault.com/labs/index.php/projects/open-source-ip-reputation-portal/information-about-ip/?ip={2};".format(fs[0],fs[3],fs[0])
 								print "{0} avotx_poller_rev={1}; {2}".format(timestamp(), avotx_poller_rev, splunk_event)
 								#syslog(cef)
 		else:
